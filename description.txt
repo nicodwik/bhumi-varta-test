@@ -1,0 +1,22 @@
+Flow Design arsitektur
+
+-- Docker Image --
+1. Menyediakan MYSQL Docker Image untuk keperluan Database
+2. Menyediakan Backend Docker Image untuk Aplikasi Backend
+3. Menyediakan Frontend Docker Image untuk Aplikasi Frontend
+
+-- Docker Container --
+4. Membuat 2 Container baru dari Mysql Image yaitu User Database Container (untuk keperluan service user)
+dan Catalog Database Container (untuk keperluan service catalog)
+5. Membuat 2 Container baru dari Backend Image yaitu User Service Container (untuk aplikasi service user)
+dan Catalog Database Container (untuk keperluan service catalog)
+6. Membuat 2 Container baru dari Backend Image yaitu Frontend Container (untuk aplikasi frontend)
+
+-- API Gateway --
+7. Membuat API Gateway untuk menjembatani antara aplikasi frontend dan aplikasi backend, membagi request
+ke masing-masing service sesuai jenis request dan port, memvalidasi request apakah memerlukan JWT atau tidak
+
+
+
+Note: Jika perlu penjelasan lebih, bisa kontak melalui email/nomor handphone
+Terima kasih
